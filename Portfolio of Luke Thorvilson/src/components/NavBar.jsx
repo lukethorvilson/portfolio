@@ -8,10 +8,25 @@ function NavBar() {
       <Link to="/">
         <Logo />
       </Link>
-      <NavLinks>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
+      <NavLinks className="text-white my-auto mr-10 flex w-[40%] justify-between tracking-wider">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/projects"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
+          Projects
+        </NavLink>
       </NavLinks>
     </div>
   );

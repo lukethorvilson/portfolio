@@ -1,6 +1,6 @@
-export default function NavLinks({ children }) {
+export default function NavLinks({ className, children }) {
   return (
-    <ul className="text-white my-auto mr-10 flex w-[40%] justify-between">
+    <ul className={className}>
       {children}
     </ul>
   );
