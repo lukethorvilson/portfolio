@@ -4,11 +4,11 @@ import NavLinks from "./NavLinks";
 
 function NavBar() {
   return (
-    <div className="bg-zinc-700 sticky flex h-24 w-full justify-between py-[0.rem]">
+    <div className="static flex h-24 w-full justify-between bg-zinc-700 py-[0.rem]">
       <Link to="/">
         <Logo />
       </Link>
-      <NavLinks className="text-white my-auto mr-10 flex w-[40%] justify-between font-links tracking-wider text-xl">
+      <NavLinks className="my-auto mr-10 flex w-[40%] justify-between font-links text-xl tracking-wider text-white">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "underline" : "")}
