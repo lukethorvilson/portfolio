@@ -5,6 +5,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiHandshake } from "react-icons/si";
+import { FaGithub } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -22,8 +23,11 @@ function Footer() {
         <Link to="https://x.com/MarinersNerd">
           <FaXTwitter className="text-white h-10 w-10" />
         </Link>
-        <Link>
-            <SiHandshake className="text-white h-10 w-10"/>
+        <Link to="https://wsu.joinhandshake.com/profiles/28954228">
+          <SiHandshake className="text-white h-10 w-10" />
+        </Link>
+        <Link to="https://github.com/lukethorvilson">
+          <FaGithub className="text-white h-10 w-10" />
         </Link>
       </div>
     </footer>
