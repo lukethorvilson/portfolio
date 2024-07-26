@@ -4,11 +4,11 @@ import NavLinks from "./NavLinks";
 
 function NavBar() {
   return (
-    <div className="bg-gray-800 flex h-24 w-full justify-between py-[0.rem]">
+    <div className="bg-zinc-700 sticky flex h-24 w-full justify-between py-[0.rem]">
       <Link to="/">
         <Logo />
       </Link>
-      <NavLinks className="text-white my-auto mr-10 flex w-[40%] justify-between tracking-wider">
+      <NavLinks className="text-white my-auto mr-10 flex w-[40%] justify-between font-links tracking-wider text-xl">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "underline" : "")}
@@ -26,6 +26,12 @@ function NavBar() {
           className={({ isActive }) => (isActive ? "underline" : "")}
         >
           Projects
+        </NavLink>
+        <NavLink
+          to="/resume"
+          className={({ isActive }) => (isActive ? "underline" : "")}
+        >
+          Resume
         </NavLink>
       </NavLinks>
     </div>
