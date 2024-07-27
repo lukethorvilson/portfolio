@@ -12,8 +12,9 @@ export default function Homepage() {
           <div className="pointer-events-none absolute inset-x-0 bottom-[0px] h-1/3 bg-gradient-to-t from-white to-transparent"></div>
         </div>
 
-        <div className="fadeInText relative top-[20rem] h-40 w-[400px] bg-gray-500 font-links text-xl">
-          <p className="">
+        <div className="relative">
+          <h1 className="font-header-100">Luke Thorvilson</h1>
+          <p className="fadeInText top-[20rem] h-40 w-[400px] bg-gray-500 text-xl">
             Hi, welcome to my portfolio! I'm pleased that you are here. Come
             explore, take a look at some of my work. I appreciate you're
             willingness to connect.

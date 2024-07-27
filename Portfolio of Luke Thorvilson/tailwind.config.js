@@ -5,6 +5,7 @@ export default {
     fontFamily: {
       links: "Exo 2, Roboto Mono",
       logo: "Josefin Sans, Roboto Mono",
+      header: "Share Tech Mono, monospace;",
     },
     extend: {},
   },
