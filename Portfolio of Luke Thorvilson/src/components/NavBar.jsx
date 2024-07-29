@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 function NavBar() {
   return (
-    <div className="static flex h-24 w-full justify-between bg-zinc-700 py-[0.rem]">
+    <div className="sticky top-0 z-10 flex h-24 w-full justify-between bg-zinc-700">
       <Link to="/">
         <Logo />
       </Link>
