@@ -17,7 +17,7 @@ export default function Homepage() {
       </div>
 
       <div className="relative -skew-x-3 content-center bg-slate-200 px-36">
-        <Header className="hover:animation-ping mb-5 mt-3 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-left font-header text-5xl text-white">
+        <Header className="mb-5 mt-3 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-left font-header text-5xl text-white">
           Luke Thorvilson
         </Header>
         <IconList>

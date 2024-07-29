@@ -12,7 +12,9 @@ function NavBar() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "rounded-lg bg-zinc-600 px-3 py-2" : "px-3 py-2"
+            isActive
+              ? "rounded-lg bg-zinc-600 px-3 py-2 transition-colors duration-500"
+              : "px-3 py-2"
           }
         >
           Home
@@ -20,7 +22,9 @@ function NavBar() {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            isActive ? "rounded-lg bg-zinc-600 px-3 py-2" : "px-3 py-2"
+            isActive
+              ? "rounded-lg bg-zinc-600 px-3 py-2 transition-colors duration-500"
+              : "px-3 py-2"
           }
         >
           About
@@ -28,7 +32,9 @@ function NavBar() {
         <NavLink
           to="/projects"
           className={({ isActive }) =>
-            isActive ? "rounded-lg bg-zinc-600 px-3 py-2" : "px-3 py-2"
+            isActive
+              ? "rounded-lg bg-zinc-600 px-3 py-2 transition-colors duration-500"
+              : "px-3 py-2"
           }
         >
           Projects
@@ -36,7 +42,9 @@ function NavBar() {
         <NavLink
           to="/resume"
           className={({ isActive }) =>
-            isActive ? "rounded-lg bg-zinc-600 px-3 py-2" : "px-3 py-2"
+            isActive
+              ? "rounded-lg bg-zinc-600 px-3 py-2 transition-colors duration-500"
+              : "px-3 py-2"
           }
         >
           Resume
