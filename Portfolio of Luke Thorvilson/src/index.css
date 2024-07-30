@@ -14,6 +14,6 @@
 
   .fadeInText {
     animation-name: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 2s;
   }
 }

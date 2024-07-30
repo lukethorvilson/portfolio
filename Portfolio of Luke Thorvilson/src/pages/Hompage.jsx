@@ -1,8 +1,9 @@
 import Header from "../components/Header";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
-import IconList from "../components/IconList";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import Button from "../components/Button";
+import IconList from "../components/IconList";
 /* eslint-disable react/no-unescaped-entities */
 export default function Homepage() {
   return (
@@ -17,29 +18,30 @@ export default function Homepage() {
       </div>
 
       <div className="relative -skew-x-3 content-center bg-slate-200 px-36">
-        <Header className="mb-5 mt-3 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-left font-header text-5xl text-white">
-          Luke Thorvilson
+        <Header className="mb-5 mt-3 w-fit skew-x-12 bg-zinc-700 px-12 py-2 text-left font-header text-5xl text-white">
+          <div className="-skew-x-12">Luke Thorvilson</div>
         </Header>
         <IconList>
           <FaReact className="h-11 w-11 skew-x-3 text-zinc-700" />
           <FaNodeJs className="h-11 w-11 skew-x-3 text-zinc-700" />
           <FaPython className="h-11 w-11 skew-x-3 text-zinc-700" />
           <IoLogoJavascript className="h-11 w-11 skew-x-3 text-zinc-700" />
+          <RiTailwindCssFill className="h-11 w-11 skew-x-3 text-zinc-700" />
         </IconList>
         <div className="fadeInText mt-6 h-40 w-[450px] text-left text-xl">
           <ul className="list-none text-slate-700">
-            <li className="mb-3">Software Engineer</li>
-            <li className="mb-3">Aspiring Web Developer</li>
-            <li className="mb-3">
+            <li className="mb-3 skew-x-3">Software Engineer</li>
+            <li className="mb-3 skew-x-3">Aspiring Web Developer</li>
+            <li className="mb-3 skew-x-3">
               React.js, Node.js, Python, and JavaScript Developer
             </li>
-            <li className="mb-3">
+            <li className="mb-3 skew-x-3">
               Washington State University Alumni, Go Cougs!
             </li>
           </ul>
         </div>
         <div className="flex">
-          <Button className="mx-auto mt-6 w-36 skew-x-3 rounded-lg bg-zinc-700 px-2 py-3 text-center font-links text-white hover:animate-pulse">
+          <Button className="hover:animate-pulse mx-auto mt-6 w-36 skew-x-3 rounded-lg bg-zinc-700 px-2 py-3 text-center font-links text-white">
             Download CV
           </Button>
         </div>
