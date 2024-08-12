@@ -23,7 +23,7 @@ export default function About() {
             captionFirst={false}
             sectionNum={1}
             contentEl={
-              <div className="m-auto w-fit rounded-xl bg-zinc-700 pb-2 pr-1">
+              <div className="w-fit rounded-xl bg-zinc-700 pb-2 pr-1">
                 <img
                   src="/graduation.JPG"
                   alt="My graduation picture"
@@ -32,7 +32,7 @@ export default function About() {
               </div>
             }
             captionEl={
-              <p className="bg-zinc-50 px-20 py-8 text-center text-xl text-zinc-700">
+              <p className="bg-zinc-50 px-20 py-8 text-xl text-zinc-700">
                 🎓 Graduated from WSU in 2024 with a software engineering
                 degree. 🚀 Pursuing full-stack development, blending React and
                 Node.js expertise. Also dabbles in Python, C, and C++.
