@@ -17,9 +17,7 @@ function AboutSection({ captionFirst, sectionNum, captionEl, contentEl }) {
     },
     [sectionNum],
   );
-
-  console.log(`Section${sectionNum}: ${section}`);
-  // <div className={`col-span-${cols} h-96 w-[90vw]`}>
+  
   if (captionFirst)
     return (
       <>
@@ -38,7 +36,6 @@ function AboutSection({ captionFirst, sectionNum, captionEl, contentEl }) {
         <div className="col-span-3 mb-9 content-center">{captionEl}</div>
       </>
     );
-  // </div>
 }
 
 export default AboutSection;

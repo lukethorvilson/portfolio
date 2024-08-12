@@ -1,6 +1,7 @@
-function Grid({ cols, gap, children }) {
+function Grid({ gap, children }) {
+  const gridGapClass = `gap-${gap}`;
   return (
-    <div className={`m-auto grid grid-cols-${cols} gap-${gap}`}>{children}</div>
+    <div className={`grid grid-cols-5 ${gridGapClass}`}>{children}</div>
   );
 }
 
