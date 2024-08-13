@@ -27,12 +27,12 @@ export default function About() {
                 <img
                   src="/graduation.JPG"
                   alt="My graduation picture"
-                  className="mx-auto w-72 rounded-xl"
+                  className="h-72 w-[700px] rounded-xl"
                 ></img>
               </div>
             }
             captionEl={
-              <p className="bg-zinc-50 px-20 py-8 text-xl text-zinc-700">
+              <p className="bg-zinc-50 px-20 py-8 text-xl text-zinc-700 text-center">
                 🎓 Graduated from WSU in 2024 with a software engineering
                 degree. 🚀 Pursuing full-stack development, blending React and
                 Node.js expertise. Also dabbles in Python, C, and C++.
@@ -41,6 +41,7 @@ export default function About() {
               </p>
             }
           />
+
           <AboutSection
             captionFirst={true}
             sectionNum={2}
@@ -58,7 +59,7 @@ export default function About() {
                 <img
                   src="/me-seattle.JPG"
                   alt="My graduation picture"
-                  className="mx-auto w-72 rounded-xl"
+                  className="h-72 w-[700px] rounded-xl"
                 ></img>
               </div>
             }
@@ -74,7 +75,7 @@ export default function About() {
               </p>
             }
             contentEl={
-              <div className="m-auto h-fit w-fit skew-x-3 bg-zinc-700 p-4">
+              <div className="m-10 h-fit w-fit skew-x-3 bg-zinc-700 p-4">
                 <div className="my-4 flex w-full -skew-x-3 justify-center gap-4">
                   <IoLogoJavascript className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
                   <FaReact className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
