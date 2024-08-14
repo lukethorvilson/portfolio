@@ -27,12 +27,12 @@ export default function About() {
                 <img
                   src="/graduation.JPG"
                   alt="My graduation picture"
-                  className="h-72 w-[700px] rounded-xl"
+                  className="h-72 w-[500px] rounded-xl"
                 ></img>
               </div>
             }
             captionEl={
-              <p className="bg-zinc-50 px-20 py-8 text-xl text-zinc-700 text-center">
+              <p className="bg-zinc-50 px-20 py-8 text-center text-xl text-zinc-700">
                 🎓 Graduated from WSU in 2024 with a software engineering
                 degree. 🚀 Pursuing full-stack development, blending React and
                 Node.js expertise. Also dabbles in Python, C, and C++.
@@ -59,7 +59,7 @@ export default function About() {
                 <img
                   src="/me-seattle.JPG"
                   alt="My graduation picture"
-                  className="h-72 w-[700px] rounded-xl"
+                  className="h-72 w-[500px] rounded-xl"
                 ></img>
               </div>
             }
