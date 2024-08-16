@@ -18,7 +18,7 @@ function NavMenu() {
           className="mx-10 my-6 h-10 w-10 cursor-pointer text-zinc-100"
         />
       )}
-      <NavMenuDropdown isOpen={isOpen} />
+      <NavMenuDropdown isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }
