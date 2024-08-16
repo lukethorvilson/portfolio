@@ -2,30 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import NavMenu from "./NavMenu";
-import { useEffect, useState } from "react";
+import useViewportWidth from "../hooks/useViewportWidth";
 
 function NavBar() {
-  const [viewportWidth, setViewPortWidth] = useState(0);
-
-  useEffect(function () {
-    function getResizedWidth() {
-      setViewPortWidth(
-        Math.max(
-          document.documentElement.clientWidth || 0,
-          window.innerWidth || 0,
-        ),
-      );
-    }
-    getResizedWidth();
-    window.addEventListener("resize", getResizedWidth);
-    return function () {
-      window.removeEventListener("resize", getResizedWidth);
-    };
-  }, []);
+  const [viewportWidth] = useViewportWidth();
 
   console.log(viewportWidth);
   return (
-    <div className="sticky top-0 z-10 flex h-24 w-full justify-between bg-zinc-700 ">
+    <div className="sticky top-0 z-10 flex h-24 w-full justify-between bg-zinc-700">
       <Link to="/">
         <Logo />
       </Link>

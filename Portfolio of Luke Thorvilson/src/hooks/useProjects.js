@@ -11,7 +11,7 @@ function useProjects() {
       try {
         setIsLoading(true);
         const { projects, error } = await getProjects();
-        if(error) throw new Error("Failed to load projects.")
+        if (error) throw new Error("Failed to load projects.");
         if (projects.length > 0) setProjects(projects);
         setIsLoading(false);
       } catch (err) {

@@ -1,9 +1,7 @@
-import ResumeContainer from "../components/ResumeContainer"
+import ResumeContainer from "../components/ResumeContainer";
 
 function Resume() {
-    return (
-           <ResumeContainer/> 
-    )
+  return <ResumeContainer />;
 }
 
-export default Resume
+export default Resume;

@@ -39,12 +39,4 @@
       transform: rotate(0.5turn);
     }
   }
-
-  .dropdown{
-    transition: all .5 ease;
-    height: auto;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
 }
