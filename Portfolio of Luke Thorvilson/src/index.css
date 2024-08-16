@@ -25,4 +25,26 @@
   .fadeIn {
     opacity: 1;
   }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid;
+    animation: l1 1s infinite;
+  }
+  @keyframes l1 {
+    to {
+      transform: rotate(0.5turn);
+    }
+  }
+
+  .dropdown{
+    transition: all .5 ease;
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }

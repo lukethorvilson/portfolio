@@ -1,30 +1,17 @@
-import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import ProjectsList from "../components/ProjectsList";
 import Separator from "../components/Separator";
-import { getProjects } from "../api/projectService";
 import Search from "../components/Search";
+import Loader from "../components/Loader";
+import useProjects from "../hooks/useProjects";
+import { useState } from "react";
 
 function Projects() {
-  const [projects, setProjects] = useState([]);
-  const [error, setError] = useState(null);
+  const [projects, error, isLoading] = useProjects();
   const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    async function setProjectState() {
-      try {
-        const { projects } = await getProjects();
-        if (projects.length > 0) setProjects(projects);
-        setError(null);
-      } catch (err) {
-        setError(err);
-      }
-    }
-    setProjectState();
-  }, []);
-
   function getFilteredSearch() {
-    if(search === null) return projects;
+    if (search === null) return projects;
     return projects.filter((project) => {
       if (
         project.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -48,11 +35,17 @@ function Projects() {
         and see what I’ve been up to!
       </p>
       <Separator />
-      <div className="m-auto mb-8 flex w-[90%] gap-4">
-        <Search search={search} setSearch={setSearch} />
-      </div>
+      {isLoading && <Loader />}
+      {!isLoading && error && <p>{error.message}</p>}
+      {!isLoading && !error && (
+        <>
+          <div className="m-auto mb-8 flex w-[90%] gap-4">
+            <Search search={search} setSearch={setSearch} />
+          </div>
 
-      <ProjectsList projects={getFilteredSearch()} />
+          <ProjectsList projects={getFilteredSearch()} />
+        </>
+      )}
     </>
   );
 }
