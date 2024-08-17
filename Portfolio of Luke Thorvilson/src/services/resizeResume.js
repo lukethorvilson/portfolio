@@ -18,8 +18,8 @@ export default function resizeResume(viewportWidth) {
       height: "1250px !important",
     },
   };
-  if(viewportWidth < 640) return resumeStyles.xsm;
-  if(viewportWidth >= 640 && viewportWidth < 768) return resumeStyles.sm;
+  if (viewportWidth < 640) return resumeStyles.xsm;
+  if (viewportWidth >= 640 && viewportWidth < 768) return resumeStyles.sm;
   if (viewportWidth >= 768 && viewportWidth < 1024) return resumeStyles.md;
-  if(viewportWidth >= 1024) return resumeStyles.lg;
+  if (viewportWidth >= 1024) return resumeStyles.lg;
 }
