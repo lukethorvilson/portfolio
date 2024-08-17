@@ -9,7 +9,7 @@ import useViewportWidth from "../hooks/useViewportWidth";
 function ResumeContainer() {
   const [viewportWidth] = useViewportWidth();
   return (
-    <div className="mx-auto my-10 sm:h-[800px] sm:w-[620px] md:h-[950px] md:w-[720px]">
+    <div className="mx-auto mb-10 mt-4 sm:h-[800px] sm:w-[620px] md:h-[950px] md:w-[720px]">
       <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
         <Viewer key={viewportWidth} fileUrl="/luke_thorvilson_resume.pdf" />
       </Worker>
