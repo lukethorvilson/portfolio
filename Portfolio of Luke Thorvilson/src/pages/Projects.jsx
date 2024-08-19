@@ -26,10 +26,10 @@ function Projects() {
 
   return (
     <>
-      <Header className="mx-auto mb-10 mt-8 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-center font-header text-5xl text-white">
+      <Header className="mx-auto mb-7 mt-8 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-center font-header text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-zinc-100">
         My Projects
       </Header>
-      <p className="m-auto w-[75%] rounded-md bg-zinc-100 p-10 px-6 text-center text-xl text-zinc-700">
+      <p className="m-auto w-[85%] sm:w-[550px] md:w-[700px] lg:w-[950px] lg:text-xl xl:w-[1200px] xl:text-2xl md:text-base text-sm rounded-md bg-zinc-100 py-3 px-6 text-center text-zinc-700">
         Welcome to my projects page! Here, you’ll find a showcase of my work,
         both from my time at school and personal projects. Feel free to explore
         and see what I’ve been up to!

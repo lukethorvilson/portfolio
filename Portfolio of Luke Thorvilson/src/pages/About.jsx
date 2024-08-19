@@ -8,63 +8,56 @@ import { CiCalculator2 } from "react-icons/ci";
 import { RiTailwindCssFill } from "react-icons/ri";
 import Grid from "../components/Grid";
 import AboutSection from "../components/AboutSection";
+import Separator from "../components/Separator";
 
 export default function About() {
-  const gridCols = 5;
   return (
     <>
-      <Header className="mx-auto mb-16 mt-8 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-center font-header text-5xl text-white">
+      <Header className="mx-auto mb-7 mt-8 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-center font-header text-3xl text-zinc-100 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
         About Me
       </Header>
+      <p className="m-auto w-[85%] sm:w-[550px] md:w-[700px] lg:w-[950px] lg:text-xl xl:w-[1200px] xl:text-2xl md:text-base text-sm rounded-md bg-zinc-100 py-3 px-6 text-center text-zinc-700">
+        Welcome to my about me page! Here, you’ll find more about who I am as a developer,
+      such as some of my goals, skills, and interests. If you want to get to know me before we 
+      meet in person, please do take a look at this page for the information I felt needed to be shared! Thank you!
+      </p>
+      <Separator />
       {/* pictures take up two spaces and text should take up 3 with a back and forth effect */}
       <div className="mx-8 my-8">
-        <Grid cols={gridCols} gap={4}>
           <AboutSection
-            captionFirst={false}
+            title="Education"
             sectionNum={1}
             contentEl={
-              <div className="w-fit rounded-xl bg-zinc-700 pb-2 pr-1">
-                <img
-                  src="/graduation.JPG"
-                  alt="My graduation picture"
-                  className="h-72 w-[500px] rounded-xl"
-                ></img>
-              </div>
+              <img
+                src="/graduation.JPG"
+                alt="My graduation picture"
+                className="h-full w-full rounded-xl"
+              ></img>
             }
-            captionEl={
-              <p className="bg-zinc-50 px-20 py-8 text-center text-xl text-zinc-700">
-                🎓 Graduated from WSU in 2024 with a software engineering
-                degree. 🚀 Pursuing full-stack development, blending React and
-                Node.js expertise. Also dabbles in Python, C, and C++.
-                Passionate about crafting digital solutions that empower users!
-                💻🌟
-              </p>
-            }
+            captionEl="🎓 Graduated from WSU in 2024 with a software engineering
+                  degree. 🚀 Pursuing full-stack development, blending React and
+                  Node.js expertise. Also dabbles in Python, C, and C++.
+                  Passionate about crafting digital solutions that empower
+                  users! 💻🌟"
           />
 
           <AboutSection
-            captionFirst={true}
+            title="Where I'm From!"
             sectionNum={2}
-            captionEl={
-              <p className="bg-zinc-50 px-20 py-8 text-center text-xl text-zinc-700">
-                Based in the Seattle area, I’m actively seeking a full-stack
+            captionEl="Based in the Seattle area, I’m actively seeking a full-stack
                 internship opportunity. Passionate about UI/UX design, database
                 management, and all things tech. Experienced in API development
                 and open to new challenges. Let’s connect and build something
-                amazing! 🚀
-              </p>
-            }
+                amazing! 🚀"
             contentEl={
-              <div className="m-auto w-fit rounded-xl bg-zinc-700 pb-2 pl-1">
-                <img
-                  src="/me-seattle.JPG"
-                  alt="My graduation picture"
-                  className="h-72 w-[500px] rounded-xl"
-                ></img>
-              </div>
+              <img
+                src="/me-seattle.JPG"
+                alt="My graduation picture"
+                className="h-full w-full rounded-xl"
+              ></img>
             }
           />
-          <AboutSection
+          {/* <AboutSection
             captionFirst={false}
             sectionNum={3}
             captionEl={
@@ -92,8 +85,7 @@ export default function About() {
                 </div>
               </div>
             }
-          />
-        </Grid>
+          /> */}
       </div>
     </>
   );

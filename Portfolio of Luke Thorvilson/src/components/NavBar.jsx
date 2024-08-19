@@ -7,7 +7,6 @@ import useViewportWidth from "../hooks/useViewportWidth";
 function NavBar() {
   const [viewportWidth] = useViewportWidth();
 
-  console.log(viewportWidth);
   return (
     <div className="sticky top-0 z-10 flex h-24 w-full justify-between bg-zinc-700">
       <Link to="/">
