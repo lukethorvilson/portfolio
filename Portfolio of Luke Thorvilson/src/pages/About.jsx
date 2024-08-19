@@ -15,7 +15,7 @@ export default function About() {
       <Header className="mx-auto mb-7 mt-8 w-fit skew-x-6 bg-zinc-700 px-12 py-2 text-center font-header text-3xl text-zinc-100 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
         About Me
       </Header>
-      <p className="m-auto w-[85%] sm:w-[550px] md:w-[700px] lg:w-[950px] lg:text-xl xl:w-[1200px] xl:text-2xl md:text-base text-sm rounded-md bg-zinc-100 py-3 px-6 text-center text-zinc-700">
+      <p className="m-auto w-[85%] sm:w-[550px] md:w-[700px] lg:w-[950px] lg:text-xl xl:w-[1200px] xl:text-2xl md:text-base text-sm rounded-md bg-zinc-100 py-3 px-6 text-center text-zinc-700 font-body">
         Welcome to my about me page! Here, you’ll find more about who I am as a developer,
       such as some of my goals, skills, and interests. If you want to get to know me before we 
       meet in person, please do take a look at this page for the information I felt needed to be shared! Thank you!

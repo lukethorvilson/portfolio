@@ -6,6 +6,7 @@ export default {
       links: "Exo 2, Roboto Mono",
       logo: "Josefin Sans, Roboto Mono",
       header: "Share Tech Mono, monospace;",
+      body: "Chakra Petch, sans-serif"
     },
     extend: {},
   },

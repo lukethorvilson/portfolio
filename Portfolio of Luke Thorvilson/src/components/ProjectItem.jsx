@@ -11,15 +11,15 @@ function ProjectItem({ project }) {
           <span className="-skew-x-6">{title}</span>
         </Header>
         <div className="mx-auto px-2 mb-5 grid grid-cols-1 rounded-md bg-zinc-600 p-2 text-zinc-100 md:w-[500px] xl:w-[550px]">
-          <h2 className="xl:text-2xl m-auto text-lg underline sm:text-xl">
+          <h2 className="xl:text-2xl m-auto text-lg underline sm:text-xl font-body">
             Description
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl">{description}</p>
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-body">{description}</p>
         </div>
 
         <div className="absolute bottom-0 mx-auto mb-6 h-10 w-[350px] sm:h-12 sm:w-[500px] md:w-[600px] lg:w-[400px] xl:w-[600px]">
           <div className="relative h-full w-[350px] border-b-2 border-b-zinc-100 sm:w-[500px] md:w-[675px] lg:w-[400px] xl:w-[600px]">
-            <p className="absolute bottom-1 left-0 text-zinc-100 lg:text-lg">
+            <p className="absolute bottom-1 left-0 text-zinc-100 lg:text-lg font-body">
               Assisted Project:{" "}
               {isAssisted ? (
                 <span className="text-green-500">True</span>
@@ -27,7 +27,7 @@ function ProjectItem({ project }) {
                 <span className="text-red-500">False</span>
               )}
             </p>
-            <p className="absolute bottom-1 right-2 text-zinc-100 hover:underline lg:text-lg">
+            <p className="absolute bottom-1 right-2 text-zinc-100 hover:underline lg:text-lg font-body">
               <a href={url}>Go to project &rarr;</a>
             </p>
           </div>

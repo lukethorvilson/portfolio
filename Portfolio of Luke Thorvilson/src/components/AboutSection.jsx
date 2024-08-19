@@ -51,7 +51,7 @@ function AboutSection({ title, sectionNum, captionEl, contentEl, noPicture }) {
         </Header>
         <div className="lg:grid lg:grid-cols-2 lg:gap-6">
           <div className="mx-auto mb-2 lg:my-auto">
-            <p className="bg-zinc-100 px-2 py-2 text-center text-sm text-zinc-700 sm:text-base md:text-lg lg:w-[450px] lg:text-2xl xl:w-[650px]">
+            <p className="bg-zinc-100 px-2 py-2 text-center text-sm text-zinc-700 sm:text-base md:text-lg lg:w-[450px] lg:text-2xl xl:w-[650px] font-body">
               <div className="-skew-x-6">{captionEl}</div>
             </p>
           </div>
