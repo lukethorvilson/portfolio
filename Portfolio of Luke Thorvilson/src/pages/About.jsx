@@ -6,7 +6,6 @@ import { SiDjango } from "react-icons/si";
 import { LuTestTube2 } from "react-icons/lu";
 import { CiCalculator2 } from "react-icons/ci";
 import { RiTailwindCssFill } from "react-icons/ri";
-import Grid from "../components/Grid";
 import AboutSection from "../components/AboutSection";
 import Separator from "../components/Separator";
 
@@ -57,35 +56,34 @@ export default function About() {
               ></img>
             }
           />
-          {/* <AboutSection
-            captionFirst={false}
+          <AboutSection
+            title="Skills"
             sectionNum={3}
-            captionEl={
-              <p className="bg-zinc-50 px-20 py-8 text-center text-xl text-zinc-700">
-                Skills include expertise in React, JavaScript, C++, Python,
+            noPicture={true}
+            captionEl=
+              "Skills include expertise in React, JavaScript, C++, Python,
                 HTML, CSS, Tailwind, Next.js, C#, Spring Boot, testing
-                frameworks, and algorithms.
-              </p>
-            }
+                frameworks, and algorithms."
+            
             contentEl={
-              <div className="m-10 h-fit w-fit skew-x-3 bg-zinc-700 p-4">
-                <div className="my-4 flex w-full -skew-x-3 justify-center gap-4">
-                  <IoLogoJavascript className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <FaReact className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <FaNodeJs className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <SiRedux className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <FaPython className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
+              <div className="mx-auto px-6 w-[250px] sm:w-[400px] skew-x-3 bg-zinc-100 p-2">
+                <div className="my-2 flex -skew-x-6 justify-center gap-4">
+                  <IoLogoJavascript className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <FaReact className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <FaNodeJs className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <SiRedux className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <FaPython className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
                 </div>
-                <div className="flex w-full -skew-x-3 justify-center gap-4">
-                  <SiDjango className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <LuTestTube2 className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <CiCalculator2 className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <FaHtml5 className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
-                  <RiTailwindCssFill className="h-fit w-16 rounded bg-zinc-100 p-2 text-zinc-700" />
+                <div className="flex w-full -skew-x-6 justify-center gap-4">
+                  <SiDjango className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <LuTestTube2 className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <CiCalculator2 className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <FaHtml5 className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
+                  <RiTailwindCssFill className="h-fit w-[30px] sm:w-16 rounded bg-zinc-700 p-2 text-zinc-100" />
                 </div>
               </div>
             }
-          /> */}
+          />
       </div>
     </>
   );

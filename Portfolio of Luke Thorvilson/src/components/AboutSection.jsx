@@ -1,10 +1,9 @@
 import { debounce } from "lodash-es";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Header from "./Header";
-import Grid from "./Grid";
 
 // responsiveness for fade in needs work, should be able to calculate this based on viewport height and object
-function AboutSection({ title, sectionNum, captionEl, contentEl }) {
+function AboutSection({ title, sectionNum, captionEl, contentEl, noPicture }) {
   // tracks sections location from top of the window
   const [section, setSection] = useState(0);
   const sectionRef = useRef();
@@ -12,12 +11,11 @@ function AboutSection({ title, sectionNum, captionEl, contentEl }) {
   // removes the hidden effect and fades in content when a certain point of the page is reached
   const removeHidden = useCallback(
     (section) => {
-      console.log(`${sectionNum}:${section}`);
-      if (section <= 900) {
+      if (section <= 450) {
         sectionRef.current.classList.add("fadeIn");
       }
     },
-    [sectionNum],
+    [],
   );
 
   // tracks scrolling and changes state when scrolled
@@ -30,6 +28,7 @@ function AboutSection({ title, sectionNum, captionEl, contentEl }) {
 
       const handleScroll = debounce(() => {
         const top = sectionRef.current.getBoundingClientRect().top;
+        console.log(`Section ${sectionNum}: ${top}`)
         setSection(top);
         removeHidden(top);
       }, 100);
@@ -45,8 +44,8 @@ function AboutSection({ title, sectionNum, captionEl, contentEl }) {
 
   // switches content and caption based on boolean prop
   return (
-    <div ref={sectionRef} className="grid grid-cols-2 gap-4">
-      <div className="hide col-span-2 mx-auto mb-9 w-[325px] skew-x-6 bg-zinc-700 p-8 sm:w-[550px] md:w-[650px] lg:w-[950px] xl:w-[1200px]">
+    <div ref={sectionRef} className="hide grid grid-cols-2 gap-4">
+      <div className="col-span-2 mx-auto mb-9 w-[325px] skew-x-6 bg-zinc-700 p-8 sm:w-[550px] md:w-[650px] lg:w-[950px] xl:w-[1200px]">
         <Header className="col-span-2 mx-auto mb-6 w-fit bg-zinc-100 px-2 text-center font-header text-xl text-zinc-700 sm:text-3xl md:text-4xl lg:col-span-2 lg:text-5xl xl:text-7xl">
           {title}
         </Header>
@@ -57,11 +56,12 @@ function AboutSection({ title, sectionNum, captionEl, contentEl }) {
             </p>
           </div>
 
-          <div className="mx-auto lg:my-auto">
+          {!noPicture && <div className="mx-auto lg:my-auto">
             <div className="mx-auto w-[150px] -skew-x-6 rounded-xl bg-zinc-300 pb-2 pr-1 sm:w-[200px] md:w-[300px] lg:w-[300px]">
               {contentEl}
             </div>
-          </div>
+          </div>}
+          {noPicture && contentEl}
         </div>
       </div>
     </div>
