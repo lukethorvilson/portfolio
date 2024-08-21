@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
-import Button from "../components/Button";
 import IconList from "../components/IconList";
 /* eslint-disable react/no-unescaped-entities */
 export default function Homepage() {
@@ -37,7 +36,7 @@ export default function Homepage() {
         </div>
         <div className="mb-4 flex">
           <a
-          className="mx-auto mt-6"
+            className="mx-auto mt-6"
             href="/luke_thorvilson_resume.pdf"
             download="Luke_Thorvilson_Resume"
           >

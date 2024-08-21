@@ -1,15 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ModeProvider } from "./contexts/ModeContext";
-import About from "./pages/About";
-import Homepage from "./pages/Hompage";
-import Layout from "./pages/Layout";
-import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
+import { lazy, Suspense } from "react";
+import Loader from "./components/Loader";
+
+// lazy loading
+const Homepage = lazy(() => import("./pages/Homepage"));
+const About = lazy(() => import("./pages/About"));
+const Layout = lazy(() => import("./pages/Layout"));
+const Projects = lazy(() => import("./pages/Projects"));
+const Resume = lazy(() => import("./pages/Resume"));
 
 function App() {
   return (
-    <ModeProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
@@ -21,8 +24,8 @@ function App() {
           {/* set up routes to pages here and layout */}
           <Route path="*" element={<h1>Page Not Found</h1>}></Route>
         </Routes>
-      </BrowserRouter>
-    </ModeProvider>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
